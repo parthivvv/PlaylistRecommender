@@ -8,9 +8,9 @@ import webbrowser
 
 
 
-client_id = '7cda5b99a423404aa6c9e9b4e27e807c'
-client_secret = '96cdc119041940ff8fced456e763c015'
-redirect_uri = 'http://localhost:8080/callback' 
+client_id = 'your_id'
+client_secret = 'your_secret'
+redirect_uri = 'http://localhost:8080/callback' #can be changed
 
 
 # Load tracks.csv into a DataFrame
@@ -50,7 +50,7 @@ def recommend_songs(track_id):
 
     return recommended_track_ids
 
-playlist_id = '191xR0j6wir2WIJ7QT83Fq' #this is the rock playlist 2y8MhYfjFPJzeQgBSfcxZH
+playlist_id = 'your_playlist_id' #this is the rock playlist 2y8MhYfjFPJzeQgBSfcxZH
 #https://open.spotify.com/playlist/2vrctqRLlQKz6lfyRzLy9e?si=b37c32259e4e41d8 this is the apitest playlist
 
 playlist_tracks = spotify.playlist_tracks(playlist_id)
