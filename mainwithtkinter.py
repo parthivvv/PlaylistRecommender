@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox
+import customtkinter
 import pandas as pd
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
@@ -9,8 +10,8 @@ from spotipy.oauth2 import SpotifyOAuth
 import webbrowser
 
 
-client_id = 'id'
-client_secret = 'secret'
+client_id = '7cda5b99a423404aa6c9e9b4e27e807c'
+client_secret = '96cdc119041940ff8fced456e763c015'
 redirect_uri = 'http://localhost:8080/callback'
 
 tracks_df = pd.read_csv('tracks.csv')
@@ -73,28 +74,29 @@ def create_playlist():
     messagebox.showinfo("Playlist Creation", "Playlist created successfully!")
 
 # Create a Tkinter window
-window = tk.Tk()
+customtkinter.set_appearance_mode("dark")
+window = customtkinter.CTk()
 window.title("Song Recommender")
 window.geometry("400x300")
 
 # Create labels and entry fields
-playlist_id_label = tk.Label(window, text="Playlist ID:")
+playlist_id_label = customtkinter.CTkLabel(window, text="Playlist ID:")
 playlist_id_label.pack()
-playlist_id_entry = tk.Entry(window)
+playlist_id_entry = customtkinter.CTkEntry(window)
 playlist_id_entry.pack()
 
-playlist_name_label = tk.Label(window, text="Playlist Name:")
+playlist_name_label = customtkinter.CTkLabel(window, text="Playlist Name:")
 playlist_name_label.pack()
-playlist_name_entry = tk.Entry(window)
+playlist_name_entry = customtkinter.CTkEntry(window)
 playlist_name_entry.pack()
 
-playlist_description_label = tk.Label(window, text="Playlist Description:")
+playlist_description_label = customtkinter.CTkLabel(window, text="Playlist Description:")
 playlist_description_label.pack()
-playlist_description_entry = tk.Entry(window)
+playlist_description_entry = customtkinter.CTkEntry(window)
 playlist_description_entry.pack()
 
 # Create a button to trigger the playlist creation process
-create_playlist_button = tk.Button(window, text="Create Playlist", command=create_playlist)
+create_playlist_button = customtkinter.CTkButton(window, text="Create Playlist", command=create_playlist)
 create_playlist_button.pack()
 
 # Start the Tkinter event loop
