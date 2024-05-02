@@ -1,2 +1,3 @@
 venv/lib/*
 venv/lib64/*
+tracks.csv
