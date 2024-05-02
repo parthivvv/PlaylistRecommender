@@ -14,7 +14,7 @@ client_id = '7cda5b99a423404aa6c9e9b4e27e807c'
 client_secret = '96cdc119041940ff8fced456e763c015'
 redirect_uri = 'http://localhost:8080/callback'
 
-tracks_df = pd.read_csv('tracks.csv')
+tracks_df = pd.read_csv('./tracks.csv')
 
 features = tracks_df[['popularity', 'danceability', 'energy', 'key', 'loudness', 'mode', 'speechiness',
                       'acousticness', 'instrumentalness', 'liveness', 'valence', 'tempo', 'time_signature']]
